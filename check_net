@@ -1,0 +1,17 @@
+#!/bin/sh
+while [ true ]; do
+	ping -c 2 zipcon.net >& /dev/null
+	status=$?
+	#echo $status $last_status
+	if [[ $status != $last_status ]]; then
+		last_status=$status
+		date
+		if [ $status = 0 ]; then
+			echo "Net is up"
+		else
+			echo "Net is down"
+		fi
+		beep
+	fi
+	sleep 10
+done

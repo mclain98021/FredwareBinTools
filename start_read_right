@@ -1,0 +1,2 @@
+svnserve -d -r /Users/mclain/Library/repos
+tracd -d --port 8000 /Users/mclain/Library/trac/readright

@@ -1,0 +1,8 @@
+#!/bin/sh
+#
+# Create a fortune index (strfile).
+# Possibly usable by others.
+#
+pushd ~/lib
+strfile -r ~/lib/fortune
+popd

@@ -1,0 +1,2 @@
+#!/bin/sh
+watch wget -r --interval=300 http://www.fs.fed.us/gpnf/volcanocams/msh/images/mshvolcanocam.jpg /home/mclain/pics/mount_st_hellens.jpg 1>&2

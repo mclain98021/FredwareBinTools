@@ -1,0 +1,6 @@
+#!/bin/sh
+while date > /Volumes/My\ Book/wakeup
+do
+	sleep 120
+done
+echo "$0 exited with error $?!"

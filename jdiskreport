@@ -1,0 +1,6 @@
+#!/bin/sh
+export JAVA_HOME=/opt/jdk1.5.0
+export PATH=$JAVA_HOME/bin:$PATH
+#cd /home/mclain/download/jgoodies/jdiskreport-1.2.1
+java -Xmx256M -jar /home/fred/download/jgoodies/jdiskreport-1.2.1/jdiskreport-1.2.1.jar
+#java -jar jdiskreport-1.2.1.jar
