@@ -1,16 +1,20 @@
-#!/bin/sh
+#!/bin/bash
+#
+# Periodically check internet connection status
+#
+# Fred McLain mclain@zipcon.net
+#
 while [ true ]; do
 	ping -c 2 zipcon.net >& /dev/null
 	status=$?
-	#echo $status $last_status
 	if [[ $status != $last_status ]]; then
 		last_status=$status
-		date
 		if [ $status = 0 ]; then
-			echo "Net is up"
+			echo -n "Net is up "
 		else
-			echo "Net is down"
+			echo -n "Net is down "
 		fi
+		date
 		beep
 	fi
 	sleep 10
