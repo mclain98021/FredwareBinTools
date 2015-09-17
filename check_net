@@ -2,7 +2,11 @@
 #
 # Periodically check internet connection status
 #
-# Fred McLain mclain@zipcon.net
+# @author Fred McLain mclain@zipcon.net
+# Copyright 2015 by Fred McLain
+# You are free to use modify or delete this silly little script.
+# This software is licensed under the Apache License version 2.0
+# http://www.apache.org/licenses/LICENSE-2.0
 #
 while [ true ]; do
 	ping -c 2 zipcon.net >& /dev/null
