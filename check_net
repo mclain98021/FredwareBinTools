@@ -8,6 +8,7 @@
 # This software is licensed under the Apache License version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
 #
+echo Fredware $0
 while [ true ]; do
 	ping -c 2 zipcon.net >& /dev/null
 	status=$?
@@ -16,11 +17,11 @@ while [ true ]; do
 		if [ $status = 0 ]; then
 			echo -n "Net is up "
 			ping -c 1 192.168.0.1 >& /dev/null
-			modemStat = $?
-			if [ $modemStat != 0 ]; then
-				echo "Modem is down"
+			modemStat=$?
+			if [[ $modemStat != 0 ]]; then
+				echo -n "Modem is down "
 			else
-				echo "Modem is up"
+				echo -n "Modem is up "
                         fi
 		else
 			echo -n "Net is down "
