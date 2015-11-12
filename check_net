@@ -2,17 +2,19 @@
 #
 # Periodically check internet connection status
 #
-# @author Fred McLain mclain@zipcon.net
 # Copyright 2015 by Fred McLain
 # You are free to use modify or delete this silly little script.
+#
 # This software is licensed under the Apache License version 2.0
 # http://www.apache.org/licenses/LICENSE-2.0
-#
+
 # Configuration values
 outsidePing='google.com'
-gateway='192.168.0.1'
+gateway='192.168.1.1'
 delay=10
-echo Fredware $0
+
+# main
+echo Fredware $0 starting `date`
 echo Gateway = $gateway Outside host = $outsidePing
 while [ true ]; do
 	ping -c 2 $outsidePing >& /dev/null
@@ -26,7 +28,7 @@ while [ true ]; do
 		fi
                 ping -c 1 $gateway >& /dev/null
                 modemStat=$?
-                if [[ $modemStat != 0 ]]; then
+                if [ $modemStat != 0 ]; then
                         echo -n "Gateway is down "
                 else
                         echo -n "Gateway is up "
