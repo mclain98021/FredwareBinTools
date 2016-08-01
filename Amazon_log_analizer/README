@@ -1,0 +1,15 @@
+Usage: ApacheLogParse.py [options]
+
+Options:
+  -h, --help            show this help message and exit
+  -f FILE, --file=FILE  file to parse, default=apache.log
+  -a, --reportAll       show all reports
+  -t, --top10           Top 10 requested pages and the number of requests made
+                        for each
+  -s, --success         Percentage of successful requests (anything in the
+                        200s and 300s range)
+  -u, --unsuccess       Percentage of unsuccessful requests (anything that is
+                        not in the 200s or 300s range)
+  -r, --top10Unsuccess  Top 10 unsuccessful page requests
+  -i, --top10IpPages    The top 10 IPs making the most requests, displaying
+                        the IP address and number of requests made
