@@ -1,0 +1,7 @@
+#!/bin/sh
+# 2007-08-18 Fred McLain
+# Remove users temporary files from /tmp and ~/tmp if unaccessed for over 2 weeks
+find /tmp -type f -user $USER -atime -15 -delete
+find /tmp -type d -user $USER -atime -15 -delete
+find $HOME/tmp -type f -user $USER -atime -15 -delete
+find $HOME/tmp -type d -user $USER -atime -15 -delete

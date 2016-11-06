@@ -1,0 +1,15 @@
+#!/bin/sh
+# Update my signature for my evolution installation.
+#
+sigfile=$HOME/.evolution/signatures/signature-3
+#pushd /home/fred/.evolution/signatures > /dev/null
+echo '* Old Evolution sig:'
+cat $sigfile
+echo > $sigfile
+/opt/local/bin/fortune ~/lib | fold -s > $sigfile
+echo '----' >> $sigfile
+#echo 'My confused blog http://unreliableinformation.blogspot.com/' >> $sigfile
+echo "================================="
+echo '* New Evolution sig:'
+cat $sigfile
+#popd > /dev/null

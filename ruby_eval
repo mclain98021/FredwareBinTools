@@ -1,0 +1,7 @@
+#!/bin/sh
+# 23 September 2006 Fred McLain
+#
+# Runs the ruby eval script
+# mostly here as a placeholder so I can find it again
+# Note: irb works better then eval.
+ruby /usr/share/doc/packages/ruby/ruby-doc-bundle/UsersGuide/rg/eval.rb

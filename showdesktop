@@ -1,0 +1,6 @@
+#!/bin/sh
+#
+# Toggle the show desktop kicker special action
+#
+ACTION=$(dcop kicker qt objects | grep ShowDesktop | head -n 1 | sed "s#(# #g" | awk '{ print $1; }')
+dcop kicker $ACTION toggle
